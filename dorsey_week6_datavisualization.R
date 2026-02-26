@@ -16,3 +16,4 @@ g1 = ggplot(data=sdat, aes(x = Sex, y = Colony.Size))+
   geom_boxplot(fill = "lightblue")
   
 g1
+
