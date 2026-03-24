@@ -15,5 +15,13 @@ g1
 g1 = ggplot(data=sdat, aes(x = Sex, y = Colony.Size))+
   geom_boxplot(fill = "lightblue")
   
+
+
+g1 = ggplot(data=sdat, aes(x = Sex, y = Colony.Size, fill=Sex))+
+   geom_boxplot() +
+  scale_fill_manual(values = c("F" = "red", "M" = "blue"))
 g1
 
+library(ggpattern)
+
+dorsey_week6_datavisualization.R
