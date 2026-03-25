@@ -14,3 +14,7 @@ I constructed a ggplot using the swallows data
 I made two different graphs, first a dot plot, and then a box plot
 Categorizing them by X = Sex and Y = Colony Size
 Adding color and testing around with the box plot
+
+# Ecology assignment 1
+Completed univariate linear model assignment for Area ~ Year, checked assumptions, and made ggplot.
+# having an issue with sending in github
