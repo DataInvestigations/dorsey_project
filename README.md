@@ -18,3 +18,4 @@ Adding color and testing around with the box plot
 # Ecology assignment 1
 Completed univariate linear model assignment for Area ~ Year, checked assumptions, and made ggplot.
 # having an issue with sending in github
+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
