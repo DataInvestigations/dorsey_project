@@ -59,3 +59,74 @@ r=ggplot(data=batdat, aes(x=species, y=lgdL))+
   theme_bw() + 
   theme(axis.title=element_text(size=20),axis.text=element_text(size=10),panel.grid = element_blank(), axis.line=element_line(),legend.position="top",legend.title=element_blank())
 print(r)
+mod1 <- lm(y ~ x, data = sdat)
+mod1 <- lm(y ~ x, data = sdat)
+mod1 <- lm(Area ~ Patch, data = sdat)
+names(sdat)
+mod1 <- lm(Area ~ Sex, data = sdat)
+summary(mod1)
+sdat <- read.csv("5NovPatchData.csv")
+head(sdat)
+names(sdat)
+mod1 <- lm(Area ~ Sex, data = sdat)
+summary(mod1)
+mod1 <- lm(Area ~ Sex, data = sdat)
+summary(mod1)
+mod1 <- lm(Area ~ Sex, data = sdat)
+summary(mod1)
+plot(mod1)
+ggplot(sdat, aes(x = Sex, y = Area)) +
+  geom_point() +
+  stat_summary(fun.data = mean_se, color = "red") +
+  theme_bw()
+mod1 <- lm(Area ~ Sex, data = sdat)
+summary(mod1)
+plot(mod1)
+names(sdat)
+[1] "Area" "Sex" "Length"
+ggplot(sdat, aes(x = Sex, y = Area)) +
+  geom_point() +
+  stat_summary(fun.data = mean_se, color = "red") +
+  theme_bw()
+library(tidyverse)
+library(ggplot2)
+library(performance)
+
+sdat <- read.csv("5NovPatchData.csv")
+
+mod1 <- lm(Area ~ Year, data = sdat)
+summary(mod1)
+
+par(mfrow = c(2,2))
+plot(mod1)
+
+check_model(mod1)
+
+ggplot(sdat, aes(x = Year, y = Area)) +
+  geom_point() +
+  stat_smooth(method = "lm", se = TRUE) +
+  theme_minimal()
+# I used a linear model to test whether year predicted area
+# I ran using lm(area - year, data = sdat)
+# then i checked the modle using a diagnostic plot
+# residual vs fitted showed a slight curve
+# the q-q plot was close to a stright line = it was normal
+# the scale location plot looks even
+# the residuals vs leverage plot did not show major points of influence
+# then i plotted relationships in ggplot using stat_smooth(method = "lm"
+# grapgh is relationship from year and area )
+ggplot(sdat, aes(x = Year, y = Area)) +
+  geom_point() +
+  stat_smooth(method = "lm", se = TRUE) +
+  theme_minimal()
+summary(mod1)
+plot(mod1)
+
+
+
+
+
+
+
+
+
