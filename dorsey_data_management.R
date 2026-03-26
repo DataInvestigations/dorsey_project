@@ -1,4 +1,8 @@
+
 sdat = read.csv("/Users/reagandorsey/Documents/bio_data_sp2026/data/5NovPatchData.csv")
+
+#KL - you can use relative paths here
+sdat = read.csv("5NovPatchData.csv")
 
 #load important packages##
 library(tidyverse)
@@ -37,7 +41,8 @@ View(sdat)
 
 sdat = sdat %>% 
   group_by(Year) %>% 
-  mutate(mean.patch=mean(Area,na.rm=TRUE)
+  mutate(mean.patch=mean(Area,na.rm=TRUE))
+#KL - i added a parantheses here 
 sdat
 # pretty much the difference 
 # is that the summaries gives you 2 numbers 
