@@ -1,5 +1,7 @@
 # dorsey_project
 
+#KL - can you update README?
+
 #Assignment - Week Data Management
 - code = dorsey_data_managment.R
 - data = 5NovPatchData.csv

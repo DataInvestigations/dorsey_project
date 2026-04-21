@@ -2,6 +2,8 @@ library(ggplot2)
 library(tidyverse)
 library(performance)
 
+#KL - your code isn't clear here or replacing mine
+#It starts all the way at the bottom so the rest of the stuff should be deleted
 sdat = read.csv("5NovPatchData.csv")
 head(sdat)
 
@@ -10,12 +12,13 @@ library(performance)
 library(ggplot2)
 
 
-#transform
-batdat$lgdL = log10(batdat$gdL)
-batdat$lcount = log10(batdat$count)
+#transform - this isn't your dataframe so don't include
+#batdat$lgdL = log10(batdat$gdL)
+#batdat$lcount = log10(batdat$count)
 
 #run linear model - continous predictor
 mod1 = lm(lgdL~lcount, data = batdat)
+#batdat is my data, not yours
 summary(mod1)
 
 #y = ax + b 
@@ -59,12 +62,16 @@ r=ggplot(data=batdat, aes(x=species, y=lgdL))+
   theme_bw() + 
   theme(axis.title=element_text(size=20),axis.text=element_text(size=10),panel.grid = element_blank(), axis.line=element_line(),legend.position="top",legend.title=element_blank())
 print(r)
+
+
+#is this where yours starts?
 mod1 <- lm(y ~ x, data = sdat)
 mod1 <- lm(y ~ x, data = sdat)
 mod1 <- lm(Area ~ Patch, data = sdat)
 names(sdat)
 mod1 <- lm(Area ~ Sex, data = sdat)
 summary(mod1)
+#what is this saying?
 sdat <- read.csv("5NovPatchData.csv")
 head(sdat)
 names(sdat)
@@ -75,6 +82,8 @@ summary(mod1)
 mod1 <- lm(Area ~ Sex, data = sdat)
 summary(mod1)
 plot(mod1)
+#what does this say?
+
 ggplot(sdat, aes(x = Sex, y = Area)) +
   geom_point() +
   stat_summary(fun.data = mean_se, color = "red") +
@@ -83,7 +92,8 @@ mod1 <- lm(Area ~ Sex, data = sdat)
 summary(mod1)
 plot(mod1)
 names(sdat)
-[1] "Area" "Sex" "Length"
+#[1] "Area" "Sex" "Length"
+#this line doesn't run
 ggplot(sdat, aes(x = Sex, y = Area)) +
   geom_point() +
   stat_summary(fun.data = mean_se, color = "red") +
