@@ -41,7 +41,7 @@ library(MASS)
 mod1 <- glm.nb(Colony.Size~Area, data = birdata)
 # Fit a GLM 
 summary(mod1)
-
+#KL: what does this mean? how did you know to run a negative binomial? 
 
 newdat = with(birdata, 
               expand.grid(
@@ -60,6 +60,8 @@ newdat$yhat = predict(mod1, newdata = newdat, type="response")
 # to the fitted model (274.93)
 #This pretty much indicates a weak support to the hypothesis 
 #that birds in larger colonies have larger forehead patches.
+
+#what null model? what does this mean? this doesn't have anything to do with your summary
 
 #######
 
